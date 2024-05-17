@@ -1,0 +1,276 @@
+/* PC */
+@media screen and (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* tablet and mobile */
+@media screen and (max-width: 991px) {
+  .header-width {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    max-width: calc(100%-32px);
+  }
+  /* header */
+  .fix-header .nav ul {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav .toggle-menu svg {
+    width: 24px;
+    color: #666;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+  }
+
+  .menu-drawer {
+    padding: 40px;
+    position: fixed;
+    inset: 0 40% 0 0;
+    background-color: #fff;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  .menu-drawer ul {
+    margin-top: 25px;
+  }
+
+  .menu-drawer ul a {
+    display: block;
+    padding: 12px 0;
+    color: #333;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #999;
+  }
+
+  /* Hero */
+  .hero .hero-img {
+    display: none;
+  }
+
+  .hero .infor {
+    max-width: 100%;
+    padding-bottom: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* client */
+  .clients .images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .clients .row {
+    text-align: justify;
+  }
+
+  /* feature */
+  .future .product {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .future .img-product {
+    width: 100%;
+  }
+
+  /* start */
+  .stats .stats-desc,
+  .stats .image-block {
+    width: 100%;
+  }
+
+  .stats .row-stats {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats .stats-desc {
+    margin-top: 70px;
+    padding: 0;
+  }
+
+  .stats .image-block .images {
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  /* subscription */
+
+  .subscription .sub-image {
+    display: none;
+  }
+
+  .subscription .infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscription .btn {
+    margin-top: 30px;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hide-on-tablet {
+    display: none;
+  }
+
+  .future .product .product-item {
+    width: calc(50% - 30px);
+    margin-top: 70px;
+  }
+
+  .stats .stats-desc .title {
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .stats .stats-desc .sub-title {
+    padding: 0 30px;
+    text-align: center;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  .content {
+    max-width: calc(100%-24px);
+  }
+
+  .menu-drawer {
+    inset: 0 25% 0 0;
+  }
+
+  .nav .action {
+    display: none;
+  }
+
+  /* hero */
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* client */
+  .client-logo-mobile {
+    width: 60%;
+  }
+
+  .clients .star {
+    padding-top: 1rem;
+  }
+
+  .clients .row-desc {
+    text-align: center;
+  }
+
+  /* guides */
+  .guides .list-guides {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .guides .list-guides .guides-item {
+    padding-top: 2rem;
+  }
+
+  /* feature */
+
+  .future .product {
+    flex-direction: column;
+    margin: 0;
+  }
+  .future .product .product-item {
+    width: 100%;
+    margin-top: 70px;
+    margin-left: 0;
+  }
+
+  /* star */
+  .stats .row-qty {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .stats .qty-item {
+    padding-top: 70px;
+  }
+
+  .stats .stats-desc .title {
+    text-align: center;
+  }
+
+  .stats .stats-desc .sub-title {
+    text-align: center;
+  }
+
+  .stats .image-block .images {
+    display: none;
+  }
+
+  .stats .stats-trend {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* subscription */
+
+  .subscription .infor {
+    padding: 0;
+    text-align: center;
+  }
+
+  /* footer */
+  .footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .copyright {
+    margin-top: 2rem;
+  }
+}
